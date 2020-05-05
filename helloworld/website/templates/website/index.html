@@ -1,0 +1,45 @@
+{% extends "website/_layouts/base.html" %}
+
+{% block title  %} Página Inicial {% endblock %}
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title">CADASTROS</h4>
+					<h6 class="card-text">Para cadastrar <code>Funcionários</code> ou
+					<code>Setores</code> da empresa, clique nas opções abaixo.</h6>
+					<a href="{% url 'website:cadastra_funcionario' %}"
+					class="btn btn-primary">
+						Novo Funcionário
+					</a>
+					<a href="{% url 'website:cadastra_setor' %}" 
+					class="btn btn-primary">
+						Novo Setor
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title">LISTAS</h4>
+					<h6 class="card-text">Para listar os <code>Funcionários</code> ou
+					<code>Setores</code> da empresa, clique nas opções abaixo.
+					</h6>
+					<a href="{% url 'website:lista_funcionarios' %}"
+					class="btn btn-primary">
+						Lista de Funcionários
+					</a>
+					<a href="{% url 'website:lista_setores' %}"
+					class="btn btn-primary">
+						Lista de Setores
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
